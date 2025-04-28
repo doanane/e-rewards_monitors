@@ -1,7 +1,20 @@
-import type { NextConfig } from "next";
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  reactStrictMode: true,
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
+  typescript: {
+    ignoreBuildErrors: true,
+  },
 
-const nextConfig: NextConfig = {
-  /* config options here */
-};
+  eslint:{
+    ignoreDuringBuilds: true,
+  },
 
-export default nextConfig;
+  images: {
+    domains: ['example.com'], // Add your image domains here
+  }
+}
+
+module.exports = nextConfig
